@@ -1,26 +1,16 @@
-let palavra;
-
 function setup() {
-  createCanvas(400, 400);
-  
-  palavra = palavraAleatoria();
-  
-}
-
-function palavraAleatoria () {
-  let palavras = ["Hello Kitty", "Kuromi", "My Melody"];
-  return random(palavras);
-}
-
-function inicializaCores() {
+  createCanvas(600, 600);
   background("black");
-  fill("pink");
-  textSize(64);
-  textAlign(CENTER, CENTER)
 }
 
-function palavraParcial (minimo, maximo) {
-  let quantidade = map(mouseX, minimo, maximo, 1, palavra.length);
-  let parcial = palavra.substring(0,quantidade);
-  return parcial;
+function draw() {
+
+  stroke ("yellow");
+  fill ("purple");
+  
+  // console.log(mouseIsPressed);
+  
+  if (mouseIsPressed) {
+    rect(mouseX, mouseY, 20, 35);
+  }
 }
